@@ -1,0 +1,377 @@
+# MYSTERYROOM
+
+## Build Your Own AI Investigation Room
+
+**A Full-Stack AI-Powered Mystery Investigation Platform**
+
+**Workshop:** NxtWave Academy – Build Your Own AI Investigation Room
+
+**Project Name:** MysteryRoom
+
+**Student Name:** Devanath N
+
+
+
+**Academic Year:** 2026-2027
+
+# ABSTRACT
+
+MysteryRoom is an AI-powered investigation platform developed as part of the NxtWave Academy workshop, *Build Your Own AI Investigation Room*.
+
+The project focuses on developing a full-stack web application that brings together mystery cases, suspects, clues, evidence and AI-powered investigation capabilities within a single digital environment.
+
+The application allows users to create mystery investigations, explore suspects, discover evidence, request hints and submit accusations. Google Gemini is integrated to support AI-based mystery generation. The backend manages investigation logic, clue validation, scoring and communication with the database.
+
+The application is developed using React and Vite for the frontend, Node.js and Express.js for the backend, Supabase PostgreSQL for database management, and Supabase Authentication for user authentication.
+
+The project follows the principles of Spec-Driven Development (SDD), where requirements and specifications guide the development process.
+
+The primary objective is to demonstrate how modern web technologies and generative AI can be combined to create an interactive investigation experience.
+
+**Keywords:** Artificial Intelligence, Mystery Investigation, Generative AI, Gemini, React, Node.js, Express.js, Supabase, PostgreSQL, Full-Stack Development, Spec-Driven Development.
+
+---
+
+# CHAPTER 1 — INTRODUCTION
+
+Artificial Intelligence is transforming how people interact with information, analyse evidence and solve complex problems.
+
+Traditional mystery-solving activities generally require users to manually organise clues, identify relationships between evidence and evaluate possible suspects.
+
+MysteryRoom introduces a digital investigation environment where these activities can be organised through an interactive web application.
+
+The platform combines full-stack development and AI integration to provide a structured mystery investigation experience.
+
+The application is designed around the following activities:
+
+- Creating mystery cases.
+- Defining suspects.
+- Generating and discovering clues.
+- Exploring investigation evidence.
+- Using hints during investigations.
+- Submitting suspect accusations.
+- Calculating investigation scores.
+
+# CHAPTER 2 — WORKSHOP OVERVIEW
+
+The project is based on the NxtWave Academy live workshop titled **Build Your Own AI Investigation Room**.
+
+The workshop introduces the process of developing an AI-powered investigation application from the initial idea through specifications, full-stack implementation, AI integration and deployment preparation.
+
+The workshop emphasises:
+
+1. Understanding AI-powered investigation systems.
+2. Creating mystery cases and suspects.
+3. Organising different types of evidence.
+4. Developing a full-stack web application.
+5. Integrating AI models.
+6. Connecting related clues.
+7. Identifying contradictions.
+8. Building investigation timelines.
+9. Generating evidence-backed investigation reports.
+
+The workshop follows a hands-on, build-along learning format.
+
+**Official workshop resources:**
+
+- Workshop recording: [https://learning.ccbp.in/event-details/dd19fdc5-da8e-498f-b73e-91f5406b6cbb](https://learning.ccbp.in/event-details/dd19fdc5-da8e-498f-b73e-91f5406b6cbb)
+- Project Help Guide: [https://bit.ly/ai-mystery-room-guide](https://bit.ly/ai-mystery-room-guide)
+- Project Submission: [https://bit.ly/ai-mystery-room-sub-form](https://bit.ly/ai-mystery-room-sub-form)
+
+# CHAPTER 3 — PROBLEM STATEMENT
+
+Investigating a mystery often involves handling multiple suspects, clues, documents and pieces of evidence.
+
+When this information is managed manually, it becomes difficult to organise evidence, track investigation progress and identify relationships between different pieces of information.
+
+There is a need for a centralised digital platform that provides structured investigation management and AI-assisted mystery generation.
+
+MysteryRoom addresses this requirement by providing an interactive environment for creating, managing and solving mystery cases.
+
+# CHAPTER 4 — PROJECT OBJECTIVES
+
+The major objectives are:
+
+- Develop a full-stack AI investigation application.
+- Create interactive mystery cases.
+- Organise suspects and clues.
+- Integrate a generative AI model.
+- Manage investigation progress.
+- Provide hints and accusation functionality.
+- Implement an automated scoring mechanism.
+- Store investigation data in a database.
+- Implement authentication and protected access.
+- Develop a responsive and user-friendly interface.
+- Prepare the application for deployment.
+
+# CHAPTER 5 — EXISTING SYSTEM
+
+In a conventional investigation or mystery-solving process, evidence is often maintained using separate documents, notes or manually organised information.
+
+This creates several limitations:
+
+- Evidence is difficult to organise centrally.
+- Suspect information may become disconnected from clues.
+- Investigation progress is difficult to track.
+- Manual analysis can be time-consuming.
+- There is no integrated scoring mechanism.
+- Information may be difficult to retrieve later.
+
+# CHAPTER 6 — PROPOSED SYSTEM
+
+MysteryRoom provides a centralised AI-powered investigation environment.
+
+The proposed system integrates frontend interfaces, backend APIs, database services and generative AI.
+
+Users can create and investigate mystery cases through a structured interface.
+
+The backend handles the investigation logic and protects hidden solutions and undiscovered clue contents.
+
+The system also supports database persistence and authentication.
+
+# CHAPTER 7 — TECHNOLOGY STACK
+
+| Layer             | Technology          |
+| ----------------- | ------------------- |
+| Frontend          | React.js            |
+| Frontend tooling  | Vite                |
+| Backend           | Node.js             |
+| Backend framework | Express.js          |
+| Database          | Supabase PostgreSQL |
+| Authentication    | Supabase Auth       |
+| AI integration    | Google Gemini       |
+| API communication | HTTP / REST APIs    |
+| Styling           | CSS                 |
+| Version control   | Git                 |
+| Source hosting    | GitHub              |
+
+**Technology note:** The workshop introduces the MERN stack and OpenAI/Gemini integrations. The current MysteryRoom implementation uses Supabase PostgreSQL instead of MongoDB and Google Gemini for AI generation.
+
+# CHAPTER 8 — SPEC-DRIVEN DEVELOPMENT
+
+Spec-Driven Development (SDD) is an approach in which project requirements and specifications are established before implementation.
+
+In MysteryRoom, the development process is organised around:
+
+1. Defining the project objective.
+2. Identifying application requirements.
+3. Defining system behaviour.
+4. Planning the application architecture.
+5. Implementing features according to specifications.
+6. Testing implemented functionality.
+7. Improving the application based on identified issues.
+
+This approach helps maintain consistency between project requirements and implementation.
+
+# CHAPTER 9 — SYSTEM ARCHITECTURE
+
+MysteryRoom follows a client-server architecture.
+
+The React frontend communicates with the Express backend through APIs.
+
+The backend coordinates mystery generation, investigation logic and database operations.
+
+Google Gemini provides AI-generated mystery content.
+
+Supabase provides PostgreSQL database services and authentication.
+
+**High-level architecture:**
+
+User → React Frontend → Express Backend → Gemini AI
+
+The backend also communicates with Supabase PostgreSQL for persistent data storage and Supabase Authentication for user identity and access control.
+
+# CHAPTER 10 — MAJOR APPLICATION MODULES
+
+### 10.1 Public Landing Page
+
+Introduces MysteryRoom, explains its features and provides access to registration and login.
+
+### 10.2 Authentication Module
+
+Provides user registration, login, session management and logout through Supabase Authentication.
+
+### 10.3 Mystery Creation Module
+
+Allows users to create a mystery investigation by selecting the required difficulty.
+
+### 10.4 AI Mystery Generation Module
+
+Uses Google Gemini to generate mystery content according to the application's requirements.
+
+### 10.5 Suspect Management Module
+
+Organises the suspects associated with a mystery case.
+
+### 10.6 Clue Discovery Module
+
+Allows users to discover and inspect investigation clues.
+
+### 10.7 Hint Management Module
+
+Provides hints to support users during an investigation.
+
+### 10.8 Accusation Module
+
+Allows users to submit their final suspect accusation.
+
+### 10.9 Scoring Module
+
+Calculates investigation scores based on the selected difficulty, discovered clues and hints used.
+
+### 10.10 Database Module
+
+Stores application data through Supabase PostgreSQL.
+
+### 10.11 Investigation History
+
+Supports saving and retrieving investigation progress.
+
+# CHAPTER 11 — DIFFICULTY AND SCORING
+
+The application defines three difficulty levels.
+
+| Difficulty | Suspects | Clues | Hints | Base Points |
+| ---------- | -------: | ----: | ----: | ----------: |
+| Easy       |        3 |     5 |     2 |         100 |
+| Medium     |        4 |     7 |     3 |         150 |
+| Hard       |        5 |     9 |     3 |         200 |
+
+The scoring mechanism is:
+
+**Correct accusation:**
+
+Score = Base Points + (Discovered Clues × 5) − (Hints Used × 10)
+
+The minimum score is zero.
+
+**Incorrect accusation:** Score = 0.
+
+# CHAPTER 12 — AI INTEGRATION
+
+Google Gemini is integrated through the backend service.
+
+The AI integration supports mystery generation based on the application's selected difficulty and required investigation structure.
+
+Generated content is validated by the backend before it is used by the application.
+
+Validation includes checking the generated mystery structure, clue identifiers, culprit references and difficulty requirements.
+
+The application also protects hidden solutions and undiscovered clue contents from public responses.
+
+# CHAPTER 13 — DATABASE MANAGEMENT
+
+Supabase PostgreSQL is used for persistent application data.
+
+The database layer supports the application's investigation storage, user ownership and progress management.
+
+Database migrations are used to define the required database structures and security policies.
+
+Row Level Security (RLS) policies help restrict access to user-owned records.
+
+# CHAPTER 14 — AUTHENTICATION AND SECURITY
+
+Supabase Authentication provides user authentication.
+
+The application uses authenticated sessions and backend token verification for protected operations.
+
+Security considerations include:
+
+- Keeping secret API keys on the backend.
+- Protecting frontend environment configuration.
+- Validating user input.
+- Restricting access to protected operations.
+- Enforcing database ownership policies.
+- Protecting hidden mystery solutions.
+- Avoiding exposure of undiscovered clues.
+
+# CHAPTER 15 — TESTING
+
+Automated backend tests have been prepared for the following areas:
+
+- Difficulty configuration.
+- Scoring calculation.
+- Generated mystery validation.
+- Duplicate clue identifier detection.
+- Invalid culprit reference detection.
+- Hidden solution protection.
+- Database migration structure.
+- Investigation resume support.
+- Authentication implementation checks.
+- UI accessibility checks.
+- Deployment configuration checks.
+
+The recorded local backend test result was 11 passed and 0 failed.
+
+The React frontend production build also completed successfully in the local Windows environment.
+
+Live integration, browser acceptance and production deployment tests remain to be completed.
+
+# CHAPTER 16 — DEPLOYMENT
+
+The project includes deployment configuration for the frontend and backend.
+
+The frontend can be prepared for Vercel deployment, while the backend includes Render deployment configuration.
+
+Supabase provides the hosted database and authentication services.
+
+Gemini API credentials must be configured securely in the backend deployment environment.
+
+A successful local build does not by itself confirm that the production deployment is working.
+
+# CHAPTER 17 — LIMITATIONS
+
+The current implementation has limitations that should be considered:
+
+- AI-generated content requires validation.
+- AI responses may vary between requests.
+- External API availability affects AI functionality.
+- The quality of investigation results depends on the generated mystery and available evidence.
+- Production behaviour must be verified after deployment.
+- Advanced evidence correlation and contradiction analysis require further implementation and validation.
+
+# CHAPTER 18 — FUTURE ENHANCEMENTS
+
+Possible future enhancements include:
+
+- Evidence image and document uploads.
+- AI-powered image and document analysis.
+- Automatic clue relationship mapping.
+- Contradiction detection.
+- Interactive investigation timelines.
+- Evidence graph visualisation.
+- Advanced AI investigation reports.
+- Collaborative investigations.
+- Investigation leaderboards.
+- Improved analytics and case management.
+
+# CHAPTER 19 — CONCLUSION
+
+MysteryRoom demonstrates how modern web technologies and generative AI can be combined to develop an interactive investigation platform.
+
+The project brings together frontend development, backend API development, database integration, authentication and AI-based content generation.
+
+The application provides a structured environment for creating mysteries, managing suspects, discovering clues, requesting hints and submitting accusations.
+
+The project also demonstrates the importance of Spec-Driven Development in organising requirements and guiding full-stack implementation.
+
+Through the NxtWave Academy workshop, this project provides practical experience in designing and developing an AI-powered web application from concept to deployment preparation.
+
+# REFERENCES
+
+1. NxtWave Academy – Build Your Own AI Investigation Room Workshop.
+2. Official workshop recording: [https://learning.ccbp.in/event-details/dd19fdc5-da8e-498f-b73e-91f5406b6cbb](https://learning.ccbp.in/event-details/dd19fdc5-da8e-498f-b73e-91f5406b6cbb)
+3. NxtWave Project Help Guide: [https://bit.ly/ai-mystery-room-guide](https://bit.ly/ai-mystery-room-guide)
+4. React Documentation: [https://react.dev/](https://react.dev/)
+5. Vite Documentation: [https://vite.dev/](https://vite.dev/)
+6. Node.js Documentation: [https://nodejs.org/docs/](https://nodejs.org/docs/)
+7. Express.js Documentation: [https://expressjs.com/](https://expressjs.com/)
+8. Supabase Documentation: [https://supabase.com/docs](https://supabase.com/docs)
+9. Google Gemini API Documentation: [https://ai.google.dev/gemini-api/docs](https://ai.google.dev/gemini-api/docs)
+10. Git Documentation: [https://git-scm.com/doc](https://git-scm.com/doc)
+
+---
+
+**END OF INITIAL PROJECT REPORT DRAFT**
+
+*Final submission version will include verified implementation details, diagrams, screenshots, database structures, API documentation and supporting appendices.*
